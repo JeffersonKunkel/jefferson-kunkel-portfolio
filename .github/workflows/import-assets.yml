@@ -1,0 +1,88 @@
+name: Import portfolio assets
+on:
+  push:
+    paths:
+      - ".github/workflows/import-assets.yml"
+permissions:
+  contents: write
+jobs:
+  import-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download portfolio images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-3428-81f9-b5b7-f69ebaea2f5d/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A38%3A29Z&ske=2026-10-05T15%3A38%3A29Z&sks=b&skv=2026-02-06&sig=6/TTQ7l7L0WosFQhO7eK/ar6l/lLsU0OSOpTic94htQ%3D' -o 'assets/scaly/scalypre1.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-d410-81f9-9e34-256dbe7170d4/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A39%3A19Z&ske=2026-10-05T15%3A39%3A19Z&sks=b&skv=2026-02-06&sig=PCTx2ECkRIez4RjVsXp65%2BYiNv84Hwuwk8Uo7/y9Qec%3D' -o 'assets/scaly/scalypre2.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-b920-81f9-b95f-c06c2cb52ebe/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A35%3A58Z&ske=2026-10-05T11%3A35%3A58Z&sks=b&skv=2026-02-06&sig=MAjGxt4S8Jd5389wZSl9B0cFuCaU/2ROOTVoNOfMhGg%3D' -o 'assets/scaly/scalypre3.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-f07c-81f9-bde9-306caa6a45f7/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A03%3A42Z&ske=2026-10-05T11%3A03%3A42Z&sks=b&skv=2026-02-06&sig=eyhx9aWiqxFZOpVbbF9ELSxF/1WfauD0kotZXeDUQZY%3D' -o 'assets/scaly/scaly8.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-9b70-81f9-9b0c-2b41acb86455/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A39%3A19Z&ske=2026-10-05T15%3A39%3A19Z&sks=b&skv=2026-02-06&sig=PdVW2MDNF%2BtSD9w9N/PAiErQFqSAVZ4OH/lUAQj6zmk%3D' -o 'assets/scaly/scaly9.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-ba08-81f9-a0ba-8b2ee14d9bdd/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T18%3A55%3A53Z&ske=2026-10-04T18%3A55%3A53Z&sks=b&skv=2026-02-06&sig=hHDHHucRnlzXzIXn9Z2eWZzDyj5MYaLJs1uKfstcZqA%3D' -o 'assets/scaly/scaly10.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-8358-81f9-80db-cfb8f2c070f8/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A57%3A05Z&ske=2026-10-05T13%3A57%3A05Z&sks=b&skv=2026-02-06&sig=3mW8e7K5Zt1ivJensKvZYWWsHRMSItVtplvjIPX%2B8Vw%3D' -o 'assets/scaly/scaly11.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-9398-81f9-823f-a8348b6f9c97/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T19%3A02%3A25Z&ske=2026-10-04T19%3A02%3A25Z&sks=b&skv=2026-02-06&sig=DX2a2GFZUuE7NejHHTw7R9Wm01QuQrCvrk2HCHqvJtc%3D' -o 'assets/scaly/scaly12.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-4480-81f9-86d3-51c993a9fac2/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A39%3A19Z&ske=2026-10-05T15%3A39%3A19Z&sks=b&skv=2026-02-06&sig=z/v8nKJeUs2k7zimHdBgA/ygo0YKBuXe8pKgnRcVo7E%3D' -o 'assets/scaly/scalypree3.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-b200-81f9-96e2-1ad3bca58c19/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A03%3A41Z&ske=2026-10-05T11%3A03%3A41Z&sks=b&skv=2026-02-06&sig=sjZ8JLOjuFTIxo89ODnCI0B9l67PnJTbAXKoUpYULvY%3D' -o 'assets/scaly/scaly2.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-abf4-81f9-a17c-0ed252f5913e/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A04%3A27Z&ske=2026-10-05T11%3A04%3A27Z&sks=b&skv=2026-02-06&sig=AcsrSiH5zS/E899J6vU6ZhcVsjotnFfkNLwftnGxz%2Bc%3D' -o 'assets/scaly/scaly1.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-69f8-81f9-8b02-06e30bbec70f/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T18%3A51%3A26Z&ske=2026-10-04T18%3A51%3A26Z&sks=b&skv=2026-02-06&sig=Y3hmxSJg8yhncR4a7TF/NNYCqBeGhKvv7ZNyG%2B9ISCc%3D' -o 'assets/scaly/scaly3.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-ddbc-81f9-9ba9-b994c0d2796c/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A18%3A16Z&ske=2026-10-05T13%3A18%3A16Z&sks=b&skv=2026-02-06&sig=%2BdwnbuYqGLCl7HijOg5H094JvtbCWKo1NKp1XyIIUKA%3D' -o 'assets/scaly/scaly4.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-4de0-81f9-bda5-160589b78aaf/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T12%3A19%3A13Z&ske=2026-10-05T12%3A19%3A13Z&sks=b&skv=2026-02-06&sig=H5tLzqEOtBmvYjmFaWVZUyrV6JUlIVmNPg0s9DoYA6c%3D' -o 'assets/scaly/scaly5.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-7be8-81f9-8dc6-ac0b325a1b96/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A18%3A17Z&ske=2026-10-05T13%3A18%3A17Z&sks=b&skv=2026-02-06&sig=7RFFCwgF4WhRb1is7jF7T85z/zX0s1unnoelPuuupP4%3D' -o 'assets/scaly/scaly6.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-01e4-81f9-8de5-fed0acd3cdc8/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A18%3A17Z&ske=2026-10-05T13%3A18%3A17Z&sks=b&skv=2026-02-06&sig=pqyJrBERZMFC0SJVZIV%2BBOfO66CxyO3%2BC/49A1jA5rI%3D' -o 'assets/scaly/scallypostttt5.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-5aa8-81f9-8801-0cd339bd38c3/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A03%3A40Z&ske=2026-10-05T11%3A03%3A40Z&sks=b&skv=2026-02-06&sig=OUxtIkiEHxjCcGbyIHW3EMZR7fJEbohU2PkICel443c%3D' -o 'assets/scaly/scalypostttt4.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-5b70-81f9-8cd2-0a4e1adcbd4f/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T14%3A44%3A15Z&ske=2026-10-05T14%3A44%3A15Z&sks=b&skv=2026-02-06&sig=Mm5OOngb5YbP/yf4r%2BZQ7PWDt7CuwS4xt6nLM%2BJBcPI%3D' -o 'assets/scaly/scalypostttt6.webp'
+          mkdir -p 'assets/scaly'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-60b8-81f9-9eb8-850dd89984a6/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T19%3A00%3A08Z&ske=2026-10-04T19%3A00%3A08Z&sks=b&skv=2026-02-06&sig=dFuETW1TwYvXuS00BKLrgu6zgBzpOZnMFQNGmWIem4s%3D' -o 'assets/scaly/scaly7.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-b1ec-81f9-9a72-a71d40d30e97/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A14%3A17Z&ske=2026-10-05T11%3A14%3A17Z&sks=b&skv=2026-02-06&sig=1F9NhyMHnGBDu23vDsdwGze7AO6wRMgnTcjZarjl71Y%3D' -o 'assets/golfview/gold5.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-b88c-81f9-a185-cd12c0a861b2/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T18%3A58%3A10Z&ske=2026-10-04T18%3A58%3A10Z&sks=b&skv=2026-02-06&sig=AbIPY8eZVpVnbCJCWO4289mJzUMbQHkHP/lpgbSDDSU%3D' -o 'assets/golfview/golfpre1.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-a9b4-81f9-ada9-f95ca6e42ba8/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T12%3A18%3A28Z&ske=2026-10-05T12%3A18%3A28Z&sks=b&skv=2026-02-06&sig=l5UKiVa01mo/Mwb2sB6yUH3zT/8DRAqO%2B3O4xiRJT14%3D' -o 'assets/golfview/golfpre2.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-d5f4-81f9-9cf5-4fe5639f8636/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A39%3A03Z&ske=2026-10-05T15%3A39%3A03Z&sks=b&skv=2026-02-06&sig=2odT/v2qGUIv5MIXGdKUwHlTfawmP7n1KNml6udq6JE%3D' -o 'assets/golfview/golf1.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-5198-81f9-b1b0-36f0982579a1/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T15%3A38%3A33Z&ske=2026-10-05T15%3A38%3A33Z&sks=b&skv=2026-02-06&sig=/74hC5nnDBdcn5u9hseNgsT0bw63679uxI1fxD1beU4%3D' -o 'assets/golfview/golf2.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-ba78-81f9-a78c-25d6464b1cd5/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T12%3A19%3A12Z&ske=2026-10-05T12%3A19%3A12Z&sks=b&skv=2026-02-06&sig=Ob83hWZSasI8uLuq0WT2xXX4AH%2Bsk29l395kGbxp8Tc%3D' -o 'assets/golfview/golf3.webp'
+          mkdir -p 'assets/golfview'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-741c-81f9-a73d-1b03eb410248/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T11%3A35%3A15Z&ske=2026-10-05T11%3A35%3A15Z&sks=b&skv=2026-02-06&sig=Qa/5hYchbKcn%2B6U%2BzOm8HGCKV/3iDIvdVWVM0j1%2BOYg%3D' -o 'assets/golfview/golf4.webp'
+          mkdir -p 'assets/oak'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-652c-81f9-bef0-1abd6e7a8aeb/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A57%3A06Z&ske=2026-10-05T13%3A57%3A06Z&sks=b&skv=2026-02-06&sig=W8ydmdyrXw12j%2B7AHYdFvPtkvDdj9iehVpZgmxwRI48%3D' -o 'assets/oak/oakpre1.webp'
+          mkdir -p 'assets/oak'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-45e4-81f9-b72c-3153226760f9/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T13%3A56%3A20Z&ske=2026-10-05T13%3A56%3A20Z&sks=b&skv=2026-02-06&sig=rv1U5sqQxrPkcMW4e4Sshjx3qqITS4aGAvZcmzkIlZM%3D' -o 'assets/oak/oakpre2.webp'
+          mkdir -p 'assets/oak'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-9614-81f9-a383-519c395c9505/raw?se=2026-10-04T15%3A48%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-04T12%3A45%3A31Z&ske=2026-10-05T12%3A45%3A31Z&sks=b&skv=2026-02-06&sig=V/dN4avi5SNlPgx/b1OyVt5ZEWITIYR0E77/WTHlEBM%3D' -o 'assets/oak/oakpre3.webp'
+          mkdir -p 'assets/oak'
+          curl -L --fail --retry 3 'https://oaisdmntpreastus.blob.core.windows.net/files/00000000-a1a0-81f9-bb42-d3fb524cd385/raw?se=2026-10-04T15%3A48%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=59aa16b5-766d-47cc-95dc-9a8ce434864c&skoid=e96cf01c-9c0f-4e27-b41e-0f2e435e6532&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-03T18%3A55%3A57Z&ske=2026-10-04T18%3A55%3A57Z&sks=b&skv=2026-02-06&sig=e8dSeIT0PplavelJUm15mnjMKpNTU79YLUfhxczJfXw%3D' -o 'assets/oak/oakpre4.webp'
+      - name: Commit images
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "No image changes."
+          else
+            git commit -m "Import portfolio image assets"
+            git push
+          fi
