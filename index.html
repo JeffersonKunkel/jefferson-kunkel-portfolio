@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jefferson Kunkle | Residential Renovation & Project Management</title>
+<meta name="description" content="Residential renovation, project management, and real estate experience in Western North Carolina.">
+<style>
+:root{
+  --paper:#f4f1eb;--ink:#252829;--muted:#6f716f;--blue:#566a73;
+  --warm:#9d9182;--brown:#605341;--line:#c9c5bd;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.48}
+img{display:block;width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:auto;padding:0 38px}
+nav{border-bottom:1px solid var(--ink)}
+.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--ink);font:19px Georgia,serif}
+.brand-copy{display:flex;flex-direction:column;line-height:1.15}
+.brand-copy b{font:500 18px Georgia,serif}
+.brand-copy small{margin-top:4px;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+nav a{text-decoration:none;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-left:22px}
+.hero{padding:72px 0 76px;border-bottom:1px solid var(--ink)}
+.eyebrow{color:var(--blue);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(58px,8vw,108px);line-height:.86;letter-spacing:-.04em;margin:36px 0 28px}
+.hero-deck{max-width:650px;font:23px/1.6 Georgia,serif;color:#505657}
+.hero-lines{margin-top:40px;padding-top:16px;border-top:1px solid var(--ink);display:flex;gap:24px;flex-wrap:wrap;font-size:10px;text-transform:uppercase;letter-spacing:.16em}
+.section{padding:92px 0;border-bottom:1px solid var(--ink)}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:start;margin-bottom:56px}
+h2{font-size:clamp(42px,5vw,66px);letter-spacing:-.025em;margin:0}
+.section-intro{max-width:520px;color:var(--muted);font-size:15px;line-height:1.7}
+.project{padding:0 0 92px;margin:0 0 72px;border-bottom:1px solid var(--line)}
+.project:last-child{margin-bottom:0}
+.project-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.project-title{font-size:44px;margin:0 0 6px}
+.project-meta{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.stats{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
+.stat{padding-left:18px;border-left:1px solid var(--line);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stat b{display:block;color:var(--ink);font:24px Georgia,serif;text-transform:none;letter-spacing:0;margin-bottom:3px}
+.phase{margin-top:44px}
+.phase-head{display:flex;align-items:flex-end;gap:18px;padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:14px}
+.phase-num{font:34px Georgia,serif;color:var(--warm);line-height:1}
+.phase-head h4{font-size:28px;margin:3px 0 0}
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.photo-card{margin:0;border-bottom:1px solid var(--line)}
+.photo-card img{aspect-ratio:4/3;object-fit:cover}
+.photo-card.landscape{grid-column:span 2}
+.photo-card.landscape img{aspect-ratio:16/10}
+.photo-card figcaption{padding:9px 0 14px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.transition{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin:48px 0 8px;color:var(--blue);font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.transition div{height:1px;background:var(--blue)}
+.scope{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.scope>div{background:var(--paper);padding:26px}
+.scope h4{font-size:21px;margin:0 0 8px}
+.scope p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:80px}
+.about-copy{font:24px/1.65 Georgia,serif;color:#505657}
+.credentials{border-top:1px solid var(--ink)}
+.credential{padding:20px 0;border-bottom:1px solid var(--line);font-size:13px}
+.credential b{display:block;font:18px Georgia,serif;margin-bottom:4px}
+.contact{background:var(--brown);color:#f4f1eb;padding:76px 0;border-top:8px solid var(--blue)}
+.contact h2{font-size:66px}
+.contact-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:24px}
+.contact-links a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:7px}
+.loading,.empty{padding:24px 0;color:var(--muted);font-style:italic}
+.error{padding:18px;border:1px solid #8a5d5d;background:#efe4e1;color:#5d3f3f}
+@media(max-width:850px){
+ .wrap{padding:0 22px} .section-head,.about{display:block} .section-intro{margin-top:18px}
+ .project-top{grid-template-columns:1fr} .stats{justify-content:flex-start} .photo-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){.photo-grid{grid-template-columns:1fr} .photo-card.landscape{grid-column:span 1} .scope{grid-template-columns:1fr} nav .links{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <div class="brand"><div class="mark">JK</div><div class="brand-copy"><b id="brandName">Jefferson Kunkle</b><small id="brandCompany">Smokey Mountain Construction & Grading</small></div></div>
+    <div class="links"><a href="#work">Selected Work</a><a href="#background">Background</a><a href="#contact">Contact</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow" id="location">Western North Carolina</div>
+    <h1 id="heroName">Jefferson<br>Kunkle</h1>
+    <div class="hero-deck" id="intro">Residential renovation, project management, and real estate experience.</div>
+    <div class="hero-lines"><span>Renovation</span><span>Project Management</span><span>Real Estate</span></div>
+  </div>
+</header>
+
+<main id="work" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">Selected work</div><h2>Residential Projects</h2></div>
+      <p class="section-intro">This portfolio updates automatically from the project backend.</p>
+    </div>
+    <div id="projects"><div class="loading">Loading projects…</div></div>
+  </div>
+</main>
+
+<section id="background" class="section">
+  <div class="wrap about">
+    <div>
+      <div class="eyebrow">Background</div>
+      <h2>Construction + Property Background</h2>
+      <p class="about-copy">Hands-on residential renovation and project management backed by real-estate experience and years of client-facing operations.</p>
+    </div>
+    <div class="credentials">
+      <div class="credential"><b>Smokey Mountain Construction & Grading</b>Owner • Franklin, NC</div>
+      <div class="credential"><b>Real estate</b>NC broker license • inactive Florida real-estate license • investment and rental property experience</div>
+      <div class="credential"><b>Operations</b>Client communication • vendor relationships • project execution</div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#d5ddd8">Contact</div>
+    <h2 id="contactName">Jefferson Kunkle</h2>
+    <div class="contact-links" id="contactLinks"></div>
+  </div>
+</footer>
+
+<script>
+const SHEET_ID = "1i4FEtpV1uaH1DgivTYK0SWlfl--ecfkCcy8pgWlxLeg";
+const endpoints = {
+  photos: `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=Photos`,
+  projects: `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=Projects`,
+  settings: `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=Site%20Settings`
+};
+
+function parseGViz(text) {
+  const start = text.indexOf('{');
+  const end = text.lastIndexOf('}') + 1;
+  if (start < 0 || end <= start) throw new Error("Could not read sheet data.");
+  const payload = JSON.parse(text.slice(start,end));
+  const cols = payload.table.cols.map(c => c.label || c.id);
+  return payload.table.rows.map(r => {
+    const obj = {};
+    cols.forEach((c,i) => obj[c] = r.c[i] ? (r.c[i].v ?? "") : "");
+    return obj;
+  });
+}
+
+async function getSheet(url) {
+  const res = await fetch(url, {cache:"no-store"});
+  if (!res.ok) throw new Error(`Sheet request failed (${res.status}).`);
+  return parseGViz(await res.text());
+}
+
+function truthy(v) {
+  return v === true || v === 1 || String(v).toLowerCase() === "true" || String(v).toLowerCase() === "yes";
+}
+function safe(s) {
+  return String(s ?? "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+function stat(label,value) {
+  return value ? `<div class="stat"><b>${safe(value)}</b>${safe(label)}</div>` : "";
+}
+function photoCard(p) {
+  if (!p["Image URL"]) return "";
+  const wide = ["Exterior","Landscaping"].includes(String(p.Category)) ? " landscape" : "";
+  return `<figure class="photo-card${wide}"><img src="${safe(p["Image URL"])}" alt="${safe(p.Caption)}" loading="lazy"><figcaption>${safe(p.Caption)}</figcaption></figure>`;
+}
+
+function renderProject(project, photos, n) {
+  const projectPhotos = photos.filter(p => p.Project === project["Project Name"] && truthy(p["Show?"]));
+  const pre = projectPhotos.filter(p => String(p.Phase).toUpperCase() === "PRE").sort((a,b)=>(+a["Display Order"]||999)-(+b["Display Order"]||999));
+  const post = projectPhotos.filter(p => String(p.Phase).toUpperCase() === "POST").sort((a,b)=>(+a["Display Order"]||999)-(+b["Display Order"]||999));
+  const preHtml = pre.map(photoCard).join("");
+  const postHtml = post.map(photoCard).join("");
+
+  return `<article class="project">
+    <div class="project-top">
+      <div><div class="eyebrow">Project ${String(n).padStart(2,"0")}</div><h3 class="project-title">${safe(project["Project Name"])}</h3><div class="project-meta">${safe(project.Location)} • ${safe(project["Project Type"])}</div></div>
+      <div class="stats">${stat("timeline",project.Timeline)}${stat("budget",project.Budget)}${stat("sale price",project["Sale Price"])}</div>
+    </div>
+    ${pre.length ? `<div class="phase"><div class="phase-head"><span class="phase-num">01</span><div><div class="eyebrow">Pre-renovation</div><h4>Starting condition</h4></div></div><div class="photo-grid">${preHtml || '<div class="empty">Photo URLs are being connected.</div>'}</div></div>` : ""}
+    ${pre.length && post.length ? `<div class="transition"><span>Renovation</span><div></div><span>${safe(project.Timeline || "Project")}</span></div>` : ""}
+    ${post.length ? `<div class="phase"><div class="phase-head"><span class="phase-num">02</span><div><div class="eyebrow">Post-renovation</div><h4>Completed property</h4></div></div><div class="photo-grid">${postHtml || '<div class="empty">Photo URLs are being connected.</div>'}</div></div>` : ""}
+    <div class="scope"><div><h4>${safe(project.Role || "Project Management")}</h4><p>${safe(project["Project Summary"])}</p></div><div><h4>Project details</h4><p>${project.Year ? safe(project.Year) + " • " : ""}${safe(project.Location)}</p></div></div>
+  </article>`;
+}
+
+async function init() {
+  try {
+    const [photos,projects,settings] = await Promise.all([
+      getSheet(endpoints.photos), getSheet(endpoints.projects), getSheet(endpoints.settings)
+    ]);
+    const cfg = Object.fromEntries(settings.filter(r=>r.Key).map(r=>[r.Key,r.Value]));
+    if (cfg.name) {
+      document.getElementById("brandName").textContent = cfg.name;
+      document.getElementById("contactName").textContent = cfg.name;
+      const bits = cfg.name.split(" ");
+      document.getElementById("heroName").innerHTML = bits.length>1 ? `${safe(bits[0])}<br>${safe(bits.slice(1).join(" "))}` : safe(cfg.name);
+    }
+    if (cfg.company) document.getElementById("brandCompany").textContent = cfg.company;
+    if (cfg.location) document.getElementById("location").textContent = cfg.location;
+    if (cfg.intro) document.getElementById("intro").textContent = cfg.intro;
+
+    const links=[];
+    if (cfg.phone) links.push(`<a href="tel:${cfg.phone.replace(/\D/g,"")}">${safe(cfg.phone)}</a>`);
+    if (cfg.email) links.push(`<a href="mailto:${safe(cfg.email)}">${safe(cfg.email)}</a>`);
+    if (cfg.linkedin) links.push(`<a href="${safe(cfg.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`);
+    document.getElementById("contactLinks").innerHTML = links.join("");
+
+    const visible = projects.filter(p=>truthy(p["Show?"])).sort((a,b)=>(+a["Display Order"]||999)-(+b["Display Order"]||999));
+    document.getElementById("projects").innerHTML = visible.map((p,i)=>renderProject(p,photos,i+1)).join("") || '<div class="empty">No projects are currently set to Show.</div>';
+  } catch(err) {
+    document.getElementById("projects").innerHTML = `<div class="error"><b>Portfolio backend is not public yet.</b><br>${safe(err.message)}<br><br>Once the Google Sheet is shared for public viewing, this page will update automatically from it.</div>`;
+  }
+}
+init();
+</script>
+</body>
+</html>
